@@ -1,0 +1,12 @@
+## 请不要修改此文件中的内容, 自定义变量请在 custom 中添加或修改
+## 该文件将在运行 autoupdate 脚本时被读取, 且该文件中的内容优先级低于 custom
+Author=ilxp
+Github=https://github.com/ilxp/oprx-builder
+TARGET_PROFILE=x86_64
+TARGET_BOARD=x86
+TARGET_SUBTARGET=64
+TARGET_FLAG=Full
+OP_VERSION=R24.1.1-20240101
+OP_AUTHOR=openwrt
+OP_REPO=openwrt
+OP_BRANCH=main
