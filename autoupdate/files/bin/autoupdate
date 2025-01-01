@@ -23,9 +23,9 @@ function SHELL_HELP() {
     -F, --force-flash		强制刷写固件 ${Red}(危险)${White} *
     -P, --proxy			优先开启镜像加速下载固件 *
     ${Next} A			自动选择镜像地址
-	${Next} E			hub.gitmirror.com
-    ${Next} F			gh.con.sh
-    ${Next} G			ghp.ci
+	${Next} E			ghproxy.cn
+    ${Next} F			ghps.cc
+    ${Next} G			ghgo.xyz
     -D <Downloader>		使用指定的下载器 <wget-ssl | wget | curl | uclient-fetch> *
     --decompress		解压 img.gz 固件后再更新固件 *
     --skip-verify		跳过固件 SHA256 校验 ${Red}(危险)${White} *
@@ -680,17 +680,17 @@ function UPGRADE() {
 			;;
 			E)
 				Proxy_Type=$2
-				Special_Commands="${Special_Commands} [ghproxy.cc]"
+				Special_Commands="${Special_Commands} [ghproxy.cn]"
 				shift
 			;;
 			F)
 				Proxy_Type=$2
-				Special_Commands="${Special_Commands} [gh.ddlc.top]"
+				Special_Commands="${Special_Commands} [ghps.cc]"
 				shift
 			;;
 			G)
 				Proxy_Type=$2
-				Special_Commands="${Special_Commands} [ghp.ci]"
+				Special_Commands="${Special_Commands} [ghgo.xyz]"
 				shift
 			;;
 			*)
@@ -1139,19 +1139,19 @@ function Proxy_X() {
 	
 	case "${Type}" in
 	raw)
-		E=https://ghproxy.cc/${URL}
-		F=https://gh.ddlc.top/${URL}
-		G=https://ghp.ci/${URL}
+		E=https://ghproxy.cn/${URL}
+		F=https://ghps.cc/${URL}
+		G=https://ghgo.xyz/${URL}
 	;;
 	release)
-		E=https://ghproxy.cc/${URL}
-		F=https://gh.ddlc.top/${URL}
-		G=https://ghp.ci/${URL}
+		E=https://ghproxy.cn/${URL}
+		F=https://ghps.cc/${URL}
+		G=https://ghgo.xyz/${URL}
 	;;
 	codeload)
-		E=https://ghproxy.cc/${URL}
-		F=https://gh.ddlc.top/${URL}
-		G=https://ghp.ci/${URL}
+		E=https://ghproxy.cn/${URL}
+		F=https://ghps.cc/${URL}
+		G=https://ghgo.xyz/${URL}
 	;;
 	esac
 	while [[ $1 ]];do
