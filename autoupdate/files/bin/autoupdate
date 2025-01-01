@@ -3,7 +3,7 @@
 # AutoUpdate for Openwrt
 # Dependences: wget-ssl/wget/uclient-fetch curl jq expr sysupgrade
 
-Version=V6.10.3
+Version=V6.10.4
 
 function TITLE() {
 	clear && echo "Openwrt-AutoUpdate Script by Hyy2001 ${Version}"
