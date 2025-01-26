@@ -3,7 +3,7 @@
 # AutoUpdate for Openwrt
 # Dependences: wget-ssl/wget/uclient-fetch curl jq expr sysupgrade
 
-Version=V6.10.5
+Version=V6.10.6
 
 function TITLE() {
 	clear && echo "Openwrt-AutoUpdate Script by Hyy2001 ${Version}"
@@ -23,8 +23,8 @@ function SHELL_HELP() {
     -F, --force-flash		强制刷写固件 ${Red}(危险)${White} *
     -P, --proxy			优先开启镜像加速下载固件 *
     ${Next} A			自动选择镜像地址
-    ${Next} E			ghproxy.cn
-    ${Next} F			ghps.cc
+    ${Next} E			gh-proxy.com
+    ${Next} F			ghproxy.net
     ${Next} G			ghfast.top
     -D <Downloader>		使用指定的下载器 <wget-ssl | wget | curl | uclient-fetch> *
     --decompress		解压 img.gz 固件后再更新固件 *
@@ -680,12 +680,12 @@ function UPGRADE() {
 			;;
 			E)
 				Proxy_Type=$2
-				Special_Commands="${Special_Commands} [ghproxy.cn]"
+				Special_Commands="${Special_Commands} [gh-proxy.com]"
 				shift
 			;;
 			F)
 				Proxy_Type=$2
-				Special_Commands="${Special_Commands} [ghps.cc]"
+				Special_Commands="${Special_Commands} [ghproxy.net]"
 				shift
 			;;
 			G)
@@ -1139,18 +1139,18 @@ function Proxy_X() {
 	
 	case "${Type}" in
 	raw)
-		E=https://ghproxy.cn/${URL}
-		F=https://ghps.cc/${URL}
+		E=https://gh-proxy.com/${URL}
+		F=https://ghproxy.net/${URL}
 		G=https://ghfast.top/${URL}
 	;;
 	release)
-		E=https://ghproxy.cn/${URL}
-		F=https://ghps.cc/${URL}
+		E=https://gh-proxy.com/${URL}
+		F=https://ghproxy.net/${URL}
 		G=https://ghfast.top/${URL}
 	;;
 	codeload)
-		E=https://ghproxy.cn/${URL}
-		F=https://ghps.cc/${URL}
+		E=https://gh-proxy.com/${URL}
+		F=https://ghproxy.net/${URL}
 		G=https://ghfast.top/${URL}
 	;;
 	esac
